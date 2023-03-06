@@ -1,16 +1,17 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-const SingleVedio = () => {
+const SingleVedio = ({video}) => {
+    const {thumbnail, title, id} = video
   return (
     <div
     className="col-span-12 sm:col-span-6 md:col-span-3 duration-300 hover:scale-[1.03]"
 >
     <div className="w-full flex flex-col">
         <div className="relative">
-            <Link to='video/1'>
+            <Link to={`video/${id}`}>
                 <img
-                    src="https://i3.ytimg.com/vi/6O4s7v28nlw/maxresdefault.jpg"
+                    src={thumbnail}
                     className="w-full h-auto"
                     alt="Some video title"
                 />
@@ -37,7 +38,7 @@ const SingleVedio = () => {
                     <p
                         className="text-slate-900 text-sm font-semibold"
                     >
-                        Video title
+                       {title}
                     </p>
                 </Link>
                 <Link to='video/1'
