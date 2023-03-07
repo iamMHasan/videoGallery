@@ -9,7 +9,7 @@ const SingleVedio = ({video}) => {
 >
     <div className="w-full flex flex-col">
         <div className="relative">
-            <Link to={`video/${id}`}>
+            <Link to={`videoes/${id}`}>
                 <img
                     src={thumbnail}
                     className="w-full h-auto"
@@ -25,7 +25,7 @@ const SingleVedio = ({video}) => {
         </div>
 
         <div className="flex flex-row mt-2 gap-2">
-            <Link to='video/1' className="shrink-0">
+        <Link to={`videoes/${id}`} className="shrink-0">
                 <img
                     src="https://avatars.githubusercontent.com/u/73503432?v=4"
                     className="rounded-full h-6 w-6"
@@ -34,14 +34,14 @@ const SingleVedio = ({video}) => {
             </Link>
 
             <div clas="flex flex-col">
-                <Link to="video.html">
+            <Link to={`videoes/${id}`}>
                     <p
                         className="text-slate-900 text-sm font-semibold"
                     >
                        {title}
                     </p>
                 </Link>
-                <Link to='video/1'
+                <Link to={`videoes/${id}`}
                     className="text-gray-400 text-xs mt-2 hover:text-gray-600"
                     href="#"
                 >
