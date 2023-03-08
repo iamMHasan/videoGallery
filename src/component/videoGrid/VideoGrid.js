@@ -6,10 +6,12 @@ import SingleVedio from './SingleVedio'
 
 const VideoGrid = () => {
   const dispatch = useDispatch()
+  const {tags, search} = useSelector(state => state.filter)
 
   useEffect(() => {
-    dispatch(fetchVideoes())
-  }, [dispatch])
+    dispatch(fetchVideoes({tags, search}))
+  }, [dispatch, tags, search])
+
   const { videos, isLoading, isError, errorMsg } = useSelector(state => state.videos)
 
   let content = 0;
